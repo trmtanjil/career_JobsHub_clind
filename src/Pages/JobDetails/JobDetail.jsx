@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import {motion} from 'framer-motion';
+import { Link } from 'react-router';
 
 const JobDetailsCard = () => {
   const job = useLoaderData();
@@ -57,6 +58,9 @@ const JobDetailsCard = () => {
       <div className="mt-4 text-sm text-gray-600">
         <p><strong>HR Name:</strong> {job.hr_name}</p>
         <p><strong>Contact:</strong> {job.hr_email}</p>
+      </div>
+      <div>
+      <Link to={`/jobapply/${job._id}`}>  <button className='btn btn-primary'>Apply Now </button></Link>
       </div>
     </motion.div>
   );

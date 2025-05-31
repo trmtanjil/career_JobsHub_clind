@@ -2,10 +2,13 @@ import Lottie from 'lottie-react'
 import React, { use } from 'react'
 import signinloop from '../../assets/login.json'
 import { AuthContext } from '../../Context/AuthContext'
+import { useLocation, useNavigate } from 'react-router'
 
 function SignIn() {
     const {signIn}= use(AuthContext)
-
+    const location =useLocation();
+    const navigat = useNavigate()
+    const from =  location.state || '/';
 
 
     const handleSignin =e=>{
@@ -16,6 +19,7 @@ function SignIn() {
         signIn(email,password)
         .then(res=>{
             console.log('user succesflly login', res)
+            navigat(from)
         })
         .catch(erro=>{
             console.log('user signin error', erro)
