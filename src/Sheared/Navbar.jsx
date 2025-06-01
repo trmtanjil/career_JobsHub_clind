@@ -7,7 +7,14 @@ function Navbar() {
 
 const links =<>
 <NavLink to='/'>Home</NavLink>
+{
+  user && <>
+  <NavLink   to='myApplications'>My Applications</NavLink>
+  </>
+}
 </> 
+
+
  
  const handlesignOut =()=>{
     signOutUser()
@@ -37,7 +44,9 @@ const links =<>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-       {links}
+      <div>
+         {links}
+      </div>
     </ul>
   </div>
   <div className="navbar-end">
