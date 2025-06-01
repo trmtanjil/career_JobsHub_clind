@@ -6,10 +6,16 @@ function Navbar() {
     const {user,signOutUser}= use(AuthContext)
 
 const links =<>
-<NavLink to='/'>Home</NavLink>
+<NavLink  className='px-6' to='/'>Home</NavLink>
 {
   user && <>
-  <NavLink   to='myApplications'>My Applications</NavLink>
+  <NavLink  className='px-6'   to='myApplications'>My Applications</NavLink>
+  </>
+}
+{
+  user && <>
+    <NavLink  className='px-6'   to='addjoob'>Add Joob</NavLink>
+
   </>
 }
 </> 

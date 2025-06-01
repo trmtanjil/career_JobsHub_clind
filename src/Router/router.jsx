@@ -11,6 +11,7 @@ import JobDetail from "../Pages/JobDetails/JobDetail";
 import JobApply from "../Pages/JobbApply/JobApply";
 import PrivetRouts from "../routes/PrivetRouts";
 import MyApplications from "../Pages/MyApplications/MyApplications";
+import AddJoob from "../Pages/AddJoob/AddJoob";
 
 
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
           path:'jobDetail/:id',
           Component:JobDetail,
           loader:({params})=>fetch(`http://localhost:3000/jobs/${params.id}`)
+        },
+        {
+          path:'addjoob',
+          element:<PrivetRouts><AddJoob></AddJoob></PrivetRouts>
         },
          {
           path:'jobapply/:id',
