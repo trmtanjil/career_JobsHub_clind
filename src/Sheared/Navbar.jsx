@@ -14,7 +14,9 @@ const links =<>
 }
 {
   user && <>
-    <NavLink  className='px-6'   to='addjoob'>Add Joob</NavLink>
+    <NavLink  className='px-6'   to='addjoob'>Add Job</NavLink>
+        <NavLink  className='px-6'   to='mypostedjob'>My Posted Job</NavLink>
+
 
   </>
 }
